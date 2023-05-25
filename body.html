@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    .navbar-brand {
+      font-weight: bold;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #f8f9fa;
+    }
+
+    .navbar-dark .navbar-nav .btn {
+      background-color: #283593;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-dark .navbar-nav .btn:hover {
+      background-color: #001064;
+    }
+    .nav-link{
+        font-size: 22px;
+    }
+    .navbar-brand img{
+        object-fit: cover;
+        width: auto;
+        height: 200px;
+    }
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    li{
+        margin: 0 10px 0 10px;
+    }
+    .image-container {
+      background-image: url("https://www.keg.com/hubfs/team-group-banner-1.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 200px 0;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .image-container h2 {
+      font-size: 42px;
+      font-weight: bold;
+      color: #fff;
+      opacity: calc(100/100);
+    }
+
+    .image-container p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      opacity: calc(100/100);
+    }
+
+    .image-container .btn {
+      background-color: #283593;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .image-container .btn:hover {
+      background-color: #001064;
+    }
+
+    .about {
+      padding: 100px 0;
+    }
+
+    .about .row {
+      align-items: center;
+    }
+
+    .about .col-md-6 {
+      order: 2;
+    }
+
+    .about .col-md-6 img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .optimised {
+      background-color: #283593;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    .optimised h2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .optimised p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .optimised ul {
+      margin-top: 30px;
+      padding-left: 20px;
+    }
+
+    .optimised ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .optimised2 {
+      background-color: white;
+      color: black;
+      padding: 100px 0;
+    }
+
+    .optimised2 h2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .optimised2 p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .optimised2 ul {
+      margin-top: 30px;
+      padding-left: 20px;
+    }
+
+    .optimised2 ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .mail {
+      padding: 100px 0;
+    }
+
+    .mail h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .mail form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mail form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .mail form label {
+      font-weight: bold;
+    }
+
+    .mail form button {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .mailcontainer {
+    border: 2px solid gainsboro;
+    border-radius: 12px;
+    padding: 20px 0 20px 0;
+}
+footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      color: #333;
+    }
+
+    footer .logo {
+      float: left;
+    }
+
+
+    footer .columns h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    footer .columns ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    footer .columns ul li {
+      margin-bottom: 5px;
+    }
+    footer li{
+        margin: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href=""><img src="./WhatsApp Image 2023-05-25 at 10.12.52 PM.jpeg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary ml-auto text-light font-weight-bold" href="#" style="background-color: #001064;">Request a Call</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="image-container">
+    <div class="overlay"></div>
+    <div class="container">
+      <h2 style="color: #fff;">Student Lead Generation</h2>
+      <p>Optimized for conversion, our websites are the perfect way for your school to generate qualified student leads.</p>
+      <a class="btn btn-primary" href="#">Schedule a Call</a>
+    </div>
+  </section>
+
+
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Boost Your Qualified Student Leads</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id efficitur nunc. Pellentesque interdum
+            tempor massa, ut ultricies erat auctor id.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id efficitur nunc. Pellentesque interdum
+            tempor massa, ut ultricies erat auctor id.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="https://www.keg.com/hs-fs/hubfs/shutterstock_1324027727%20%5BConverted%5D.png?width=466&name=shutterstock_1324027727%20%5BConverted%5D.png" alt="Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="optimised">
+    <div class="container">
+      <h2 class="text-center">Optimized for Conversion</h2>
+      <p class="text-center">Keystone’s student lead generation websites are designed to optimize conversions and provide valuable information for prospective students.</p>
+      <ul>
+        <li>Keystone’s SEO captures detailed searches and directs qualified students to your program listings.</li>
+        <li>Your program and school pages are advertisement-free and provide information specific to your programs and courses.</li>
+        <li>Student-friendly websites are designed to engage visitors and encourage them to contact programs that interest them.</li>
+        <li>Our customizable contact forms help you generate the right kinds of student inquiries.</li>
+        <li>Keystone’s lead forms give you access to our high conversion rate and communication tools – wherever you want to reach students.</li>
+        <li>Visitors can filter results by field of study, location, mode of study, and other specifications.</li>
+        <li>Students can directly contact the schools they are interested in via our form.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="optimised2">
+    <div class="container">
+      <h2 class="text-center">Your Benefits</h2>
+      <ul>
+        <li>Your programs are visible to students in 33+ languages.</li>
+        <li>Qualified student leads are delivered straight to your team.</li>
+        <li>Receive relevant student enquiries for your courses and programs.</li>
+        <li>Dedicated landing pages, optimized to convert leads.</li>
+        <li>No distractions - your promotional pages are yours, no external banners or advertising.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mail">
+    <div class="container mailcontainer">
+      <h2>Request a Call</h2>
+      <form>
+        <div class="form-group">
+          <label for="school">School or Organization</label>
+          <input type="text" class="form-control" id="school" required>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="yourself">Tell us about yourself</label>
+          <select class="form-control" id="yourself" required>
+            <option value="">Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <a class="navbar-brand" href=""><img src="./WhatsApp Image 2023-05-25 at 10.12.52 PM.jpeg" alt=""></a>
+      </div>
+      <div class="columns">
+        <div class="row">
+          <div class="col-sm-3">
+            <h4>Services</h4>
+            <ul>
+              <li>CRM & Marketing Automation</li>
+              <li>Student Recruitment</li>
+              <li>Student Conversion Services</li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h4>Why Us</h4>
+            <ul>
+              <li>Our Brands</li>
+              <li>Testimonials</li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h4>Resources</h4>
+            <ul>
+              <li>Blog</li>
+              <li>Events & Webinars</li>
+              <li>Media Kit</li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h4>Get in Touch</h4>
+            <ul>
+              <li>Email: info@example.com</li>
+              <li>Phone: 123-456-7890</li>
+              <li>Address: 123 Street, City</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Your remaining content and scripts here -->
+
+  <!-- ReCaptcha script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- Content goes here -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
